@@ -1,25 +1,53 @@
 <template>
     <pr-page-template title="Work Experience" logo="experience">
-      <pr-card>
-        <h3>Profesionals</h3>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod voluptates sit tempore beatae itaque explicabo! Maxime perspiciatis odit soluta esse neque sint animi! Totam minima ad nihil error, tempora nostrum?
-        </p>
-      </pr-card>
-      <pr-card>
-        <h3>Personal</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi distinctio, quis exercitationem optio corporis nesciunt rem, omnis officia quas ut dignissimos ratione, mollitia similique sequi sed tempore neque placeat consectetur?
-        </p>
-      </pr-card>
+      <pr-job v-for="job in job_list" :job="job"></pr-job>
     </pr-page-template>
   </template>
   
   <script setup>
   
+  import PrJob from '@/components/core/PrJob.vue';
   import PrPageTemplate from '@/components/core/PrPageTemplate.vue';
-  import PrCard from '@/components/core/PrCard.vue';
-  
+
+  const job_list = [
+    {
+      enterprise: {
+        name: "Tecno Makers SAS",
+        picture: "https://www.tecno-makers.com/themes/onepage/front-logo.svg",
+        position: "Ux Writter",
+        date: {
+          start: "May 2020",
+          end: "Feb 2021"
+        }
+      },
+      functions: [
+        "Ux Writting interfaces for Discovery+ and Discovery Kids LATAM"
+      ],
+      products: [
+        "Discovery+",
+        "Discovery kids LATAM"
+      ],
+    },
+    {
+      enterprise: {
+        name: "Start Up La Haus",
+        picture: "https://www.tecno-makers.com/themes/onepage/front-logo.svg",
+        position: "Creative Copywriter",
+        date: {
+          start: "May 2020",
+          end: "Feb 2021"
+        }
+      },
+      functions: [
+        "Ux Writting for real state software development",
+        "Copywriting for mails, sms and online advertising in Bogotá, Medellin and Mexico city"
+      ],
+      products: [
+        "Real state project launcher",
+        "Redesing and Write the new page"
+      ],
+    }
+  ]
   </script>
   
   <style scoped>
