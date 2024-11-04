@@ -1,14 +1,4 @@
 <template>
-    <section class="page-header">
-        <h3>
-            <pr-logo :logo="props.logo"/>
-            <span>{{ props.title }}</span>
-        </h3>
-        <a href="" class="contact-button">
-            <div class="logo-contact"></div>
-            <span>Contact me</span>
-        </a>
-    </section>
     <section class="page-content">
         <slot />
     </section>
@@ -16,7 +6,6 @@
 
 <script setup>
 
-import PrLogo from './PrLogo.vue';
 const props = defineProps(['title', 'logo'])
 
 </script>

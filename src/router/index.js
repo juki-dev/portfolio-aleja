@@ -9,7 +9,11 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/SkillsView.vue')
+      component: () => import('../views/SkillsView.vue'),
+      meta: {
+        title: "Skills",
+        logo: "skills",
+      }
     },
     {
       path: '/education',
@@ -17,7 +21,11 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/EducationView.vue')
+      component: () => import('../views/EducationView.vue'),
+      meta: {
+        title: "Education",
+        logo: "education",
+      }
     },
     {
       path: '/experience',
@@ -25,7 +33,11 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/WorkView.vue')
+      component: () => import('../views/WorkView.vue'),
+      meta: {
+        title: "Experience",
+        logo: "experience",
+      }
     },
     {
       path: '/portfolio',
@@ -33,7 +45,11 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/PortfolioView.vue')
+      component: () => import('../views/PortfolioView.vue'),
+      meta: {
+        title: "Portfolio",
+        logo: "portfolio",
+      }
     }
   ]
 })
